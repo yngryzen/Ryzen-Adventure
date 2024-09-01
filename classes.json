@@ -1,0 +1,32 @@
+[
+    {
+        "Class": "Knight",
+        "Weapon": "Sword",
+        "Health": 115,
+        "Damage": 10
+    },
+    {
+        "Class": "Barbarian",
+        "Weapon": "Great Axe",
+        "Health": 135,
+        "Damage": 15
+    },
+    {
+        "Class": "Prisoner",
+        "Weapon": "Shiv",
+        "Health": 90,
+        "Damage": 8
+    },
+    {
+        "Class": "Priest",
+        "Weapon": "Holy Magic",
+        "Health": 120,
+        "Damage": 15
+    },
+    {
+        "Class": "Peasant",
+        "Weapon": "Fist",
+        "Health": 50,
+        "Damage": 4
+    }
+]
