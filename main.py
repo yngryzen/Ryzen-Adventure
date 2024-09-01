@@ -164,20 +164,28 @@ if task3 == "A":
     if task3r > 6:
         print("You survived and killed the goblin, but at a cost.")
         print("> -25 health.")
-        character.health - 25
+        character.health -= 25
         print(f"{character.name}, you have {character.health} remaining.")
     else:
         print("You have died to the goblins. Save deleted")
         os.remove("character.json")
-        print(f"> Details: {task3} out of {character.damage} (You needed more than 6)")
+        print(f"> Details: {task3r} out of {character.damage} (You needed more than 6)")
+        time.sleep(10)
+        quit()
 else:
     print("You narrowly escape.")
 time.sleep(2)
 print("You enter the kingdom.")
 time.sleep(5)
 print("'That's weird',  you say to yourself. 'There's no security.'")
-time.sleep(1)
-print("GOD REST YE MERRY GENTLEMAN \n LET NOTHING YOU DISMAY \n REMEMBER CHRIST OUR SAVIOUR \n WAS BORN ON CHRISTMAS DAY")
+time.sleep(4)
+print("GOD REST YE MERRY GENTLEMAN")
+time.sleep(2)
+print("LET NOTHING YOU DISMAY")
+time.sleep(2)
+print("REMEMBER CHRIST OUR SAVIOUR")
+time.sleep(2)
+print("WAS BORN ON CHRISTMAS DAY")
 time.sleep(4)
 print("> Okay. I'm going to give you an option to save your character.")
 save1 = input("Save? [Y] [N] | ")
@@ -185,7 +193,7 @@ if save1 == "Y":
     character.save()
 else:
     print("> Brave choice. +15 health")
-    character.health + 15
+    character.health += 15
 task4 = input("You see a Dragon in the palace instead of people. What do you do? [S] Sneak around [F] Fight")
 if task4 == "S":
     print("You sneak around.")
@@ -208,17 +216,22 @@ if finaltask == "F":
     if sitem == "Knife":
         print("Knife has added 15 damage points.")
         character.damage + 15
+        time.sleep(5)
     else: print("No knife")
     if character.weapon == "Holy Magic":
         print("Holy magic is effective against dragons. + 20 damage")
+        character.damage += 20
+        time.sleep(5)
     else: print("No magic")
     if sitem == "Bandages":
         print("Added health from bandages. + 50")
-        character.health + 50
+        character.health += 50
     else: print("No bandages.")
     print(f"You attempt to fight the dragon (Current stats: Damage{character.damage} Health:{character.health})")
+    time.sleep(5)
     if character.damage >= 100 & character.health >= 15:
         print("Welldone. You have slayed the dragon.")
+        time.sleep(5)
         print("Manually exit.")
         os.remove("character.json")
         time.sleep(10000000)
@@ -226,7 +239,9 @@ if finaltask == "F":
         print("> You are not worthy enough.")
         time.sleep(10)
         print("The dragon has digested you.")
+        time.sleep(5)
         print("> Thanks for the meal.")
+        time.sleep(5)
         print("Leave manually.")
         os.remove("character.json")
         time.sleep(10000000)
